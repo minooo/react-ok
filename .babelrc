@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "@babel/env", // 无忧使用 es6 7 8 +
+        "@babel/react" // 让我们使用 jsx 语法
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime", // 复用babel注入的帮助程序代码，减小打包体积
+        "@babel/plugin-proposal-class-properties", // 支持class静态特性
+        ["import", {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css" // `style: true` 会加载 less 文件
+          }]
+    ]
+}
